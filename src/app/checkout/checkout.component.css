@@ -1,0 +1,32 @@
+.checkout{
+    margin: 50px;;
+}
+h2,h3{
+    text-align: center;
+}
+.form-input{
+    border-radius: 10px;
+    height: 50px;
+}
+.form-button{
+    border-radius: 10px;
+    height: 50px; 
+}
+.form-button:hover{
+    color: aqua;
+}
+
+.checkout h2 {
+    position: relative;
+    text-align: center;
+  }
+  
+  .checkout h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 35%;
+    right: 35%;
+    height: 2px;
+    background-color: black;
+  }

@@ -1,0 +1,38 @@
+<div class="center">
+  <div class="wrapper">
+    <div class="form-box login">
+      <h2>Đăng nhập</h2>
+      <form
+        #userLogin="ngForm"
+        class="common-form"
+        (ngSubmit)="login(userLogin.value)"
+      >
+        <p class="text-danger text-center">{{ authError }}</p>
+
+        <div class="input-box">
+          <input
+            ngModel
+            name="email"
+            type="email"
+            class="user-password"
+            id="exampleInputEmail"
+            aria-describedby="emailHelp"
+          />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input
+            ngModel
+            name="password"
+            type="password"
+            class="user-password"
+            id="exampleInputPassword"
+          />
+          <label>Mật khẩu</label>
+        </div>
+
+        <button type="submit" class="btn-register">Đăng nhập</button>
+      </form>
+    </div>
+  </div>
+</div>

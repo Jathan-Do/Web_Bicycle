@@ -1,0 +1,91 @@
+<div class="product-list m-5">
+  <h1 class="text-center mb-5">Danh sách danh mục</h1>
+  <div class="mb-3 row">
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Số danh mục trên mỗi trang:</h6>
+      <select [(ngModel)]="itemsPerPage" class="form-control w-25">
+        <option *ngFor="let option of selectedItemsPerPage" [value]="option" (change)="onChangeItemsPerPage($event)">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Tìm kiếm:</h6>
+      <input [(ngModel)]="searchText" style="
+          background: #ffffff;
+          border-width: 2px 2px 2px 2px;
+          border-style: solid;
+          border-color: #274d5a;
+          border-radius: 10px;
+          padding: 8px;
+          padding-left: 12px;
+        " class="w-50" />
+    </div>
+  </div>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr style="cursor: pointer">
+        <th scope="col" (click)="sort('id')">#</th>
+        <th scope="col" (click)="sort('name')">Tên danh mục</th>
+        <th scope="col" (click)="sort('length')">Số lượng sản phẩm</th>
+        <th scope="col">Tính năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="
+          let category of categories
+            | search : searchText
+            | paginate
+              : {
+                  id: 'seller-category-list-pagination',
+                  itemsPerPage: itemsPerPage,
+                  currentPage: page,
+                  totalItems: totalRecords
+                }
+        ">
+        <td>{{ category.id }}</td>
+        <td>{{ category.name }}</td>
+        <td>{{ category.products.length }}</td>
+        <td>
+          <button class="btn btn-outline-success mr-2" (click)="selectCategory(category)">
+            Sửa
+          </button>
+          <button class="btn btn-outline-danger" (click)="deleteCategory(category.id)">
+            Xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <h6>
+      Showing {{ getStartIndex() }} to {{ getEndIndex() }} of
+      {{ totalRecords }} entries
+    </h6>
+  </div>
+  <div class="paging d-flex justify-content-center">
+    <pagination-controls id="seller-category-list-pagination" (pageChange)="page = $event"></pagination-controls>
+  </div>
+  <h2>{{ isEditing ? "Chỉnh sửa danh mục" : "Thêm danh mục" }}</h2>
+
+  <div class="m-4">
+    <form (ngSubmit)="isEditing ? updateCategory() : addCategory(selectedCategory)">
+      <div class="form-group">
+        <label for="categoryName">Tên danh mục:</label>
+        <input type="text" class="form-control" id="categoryName" [(ngModel)]="selectedCategory.name"
+          name="categoryName" required #categoryName="ngModel" />
+        <p *ngIf="
+            !categoryName.valid && categoryName.dirty && categoryName.touched
+          " class="text-danger mt-2">
+          Vui lòng nhập Tên danh mục!
+        </p>
+      </div>
+      <button type="submit" class="btn btn-outline-primary" [disabled]="!selectedCategory.name">
+        {{ isEditing ? "Chỉnh sửa" : "Thêm mới" }}
+      </button>
+      <button type="button" class="btn btn-outline-secondary ml-2" (click)="cancelEditing()">
+        Hủy
+      </button>
+    </form>
+  </div>
+</div>

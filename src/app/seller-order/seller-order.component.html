@@ -1,0 +1,113 @@
+<div class="product-list m-5">
+  <h1 class="text-center mb-5">Danh sách đơn hàng</h1>
+  <div class="row mb-3">
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Số đơn hàng trên mỗi trang:</h6>
+      <select [(ngModel)]="itemsPerPage" class="form-control w-25">
+        <option *ngFor="let option of selectedItemsPerPage" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Tìm kiếm:</h6>
+      <input name="searchText" [(ngModel)]="searchText" (change)="onSearchChange()" style="
+          background: #ffffff;
+          border-width: 2px 2px 2px 2px;
+          border-style: solid;
+          border-color: #274d5a;
+          border-radius: 10px;
+          padding: 8px;
+          padding-left: 12px;
+        " class="w-50" />
+    </div>
+  </div>
+  <ng-container *ngIf="orderData && orderData.length > 0; else noOrders">
+    <div class="card mb-3" *ngFor="
+        let order of orderData
+          | paginate
+            : {
+                id: 'seller-order-list-pagination',
+                itemsPerPage: itemsPerPage,
+                currentPage: page,
+                totalItems: totalRecords
+              }
+      ">
+      <ul style="margin: 10px; list-style: none">
+        <li>Mã đơn hàng: #{{ order.id }}</li>
+        <li>
+          {{ order.date | date : "HH 'giờ' mm 'phút, ' 'ngày' dd/MM/yyyy" }}
+        </li>
+        <li>
+          <ng-container *ngIf="
+              order.status.toLowerCase() !== 'hủy đơn hàng' &&
+              order.status.toLowerCase() !== 'đang giao hàng' &&
+              order.status.toLowerCase() !== 'đã giao hàng'
+            ">
+            <button style="position: absolute; right: 10px; top: 40px" class="cancel-order btn btn-outline-primary"
+              (click)="shipOrder(order.id)">
+              Giao hàng
+            </button>
+          </ng-container>
+          <ng-container *ngIf="order.status.toLowerCase() === 'đang giao hàng'">
+            <button style="position: absolute; right: 10px; top: 40px" class="cancel-order btn btn-outline-success"
+              (click)="finishOrder(order.id)">
+              Đã giao hàng
+            </button>
+          </ng-container>
+        </li>
+        <li>
+          <div style="position: absolute; right: 10px; top: 10px">
+            Trạng thái: <strong style="color: red">{{ order.status }}</strong>
+          </div>
+        </li>
+      </ul>
+      <div class="row" style="margin-top: 2%">
+        <div class="col-lg-6">
+          <div class="col-lg-6">
+            <div class="dropdown custom-dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Danh sách sản phẩm
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li *ngFor="let orderDetail of order.orderDetails">
+                  <div class="row m-1">
+                    <a>
+                      <img class="m-1 img-fluid" width="200px" src="{{ getProductById(orderDetail.productId)?.image }}"
+                        alt="{{ getProductById(orderDetail.productId)?.name }}" />
+                    </a>
+                    <div class="col-6" style="margin-top: 5px">
+                      <h6>{{ getProductById(orderDetail.productId)?.name }}</h6>
+                      <h6>Số lượng: {{ orderDetail.quantity }}</h6>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" style="text-align: right">
+          <div style="margin-right: 3%">
+            <p>Địa chỉ: {{ order.address }}</p>
+            <p>Số điện thoại: {{ order.contact }}</p>
+            <p>Phương thức thanh toán: {{ order.payment }}</p>
+            <p>Tổng tiền: {{ order.totalPrice | number : "1.0-0" }}₫</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noOrders>
+    <p>Chưa có đơn đặt hàng nào mới</p>
+  </ng-template>
+  <div>
+    <h6>
+      Showing {{ getStartIndex() }} to {{ getEndIndex() }} of
+      {{ totalRecords }} entries
+    </h6>
+  </div>
+</div>
+<div class="paging d-flex justify-content-center">
+  <pagination-controls id="seller-order-list-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>

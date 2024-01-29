@@ -1,0 +1,150 @@
+<style>
+    .btn-add-less {
+        width: 15%;
+        color: #f7d662;
+        font-size: 24px;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        background-color: #274d5a;
+    }
+
+    .btn-add-less:hover {
+        background-color: #f7d662;
+        color: #274d5a;
+    }
+
+    .btn-add-less:first-child {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .btn-add-less:last-child {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .btn-add {
+        transition: all 0.2s linear;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-add::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #f7d662;
+        transform-origin: 0 left right 0;
+        transform: scaleX(0);
+        transition: 0.25s linear;
+    }
+
+    .btn-add:hover::before {
+        transform: scaleX(1);
+    }
+
+    .btn-add:hover span {
+        color: #274d5a;
+        position: relative;
+        z-index: 10;
+    }
+
+    .btn-add:active {
+        animation: zoom-in-zoom-out 2.5s alternate ease;
+    }
+
+    .btn-remove {
+        transition: all 0.2s linear;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-remove::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        transform-origin: 0 left right 0;
+        transform: scaleX(0);
+        transition: 0.25s linear;
+    }
+
+    .btn-remove:hover::before {
+        transform: scaleX(1);
+    }
+
+    .btn-remove:hover span {
+        color: white;
+        position: relative;
+        z-index: 10;
+    }
+
+    .btn-remove:active {
+        animation: zoom-in-zoom-out 2.5s alternate ease;
+    }
+</style>
+<div class="container mt-5 mb-5 p-2 rounded bg-light">
+    <div class="row" *ngIf="productData">
+        <div class="col-md-6">
+            <img class="img-thumbnail" src="{{ productData.image }}" alt="" />
+        </div>
+        <div class="col-md-6">
+            <div class="details">
+                <h1 class="text-center" style="color: #274d5a">
+                    {{ productData.name }}
+                </h1>
+                <h3>Giá: {{ productData.price | number : "1.0-0" }}₫</h3>
+                <div class="d-flex align-items-center">
+                    <h5 class="me-2">Màu:</h5>
+                    <span [style.backgroundColor]="productData.color" class="product-color mb-3"></span>
+                </div>
+                <h5>Mô tả: {{ productData.description }}</h5>
+
+                <div class="text-center" *ngIf="IsLogin">
+                    <div class="row mb-2">
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                            <div class="btn-add-less" (click)="handleQuantity('min')">-</div>
+                            <input style="
+                  width: 100% !important;
+                  background: rgba(217, 217, 217, 0.3);
+                  border-radius: 0;
+                  border: none;
+                " type="number" class="form-control w-100 text-center" [value]="productQuantity" disabled />
+                            <div class="btn-add-less" (click)="handleQuantity('plus')">+</div>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            Thành tiền:
+                            {{ productData.price * productQuantity | number : "1.0-0" }}₫
+                        </div>
+                    </div>
+                    <button style="background-color: #274d5a; color: #f7d662" *ngIf="removeCart"
+                        class="btn w-50 mt-1 btn-remove" (click)="removeToCart(productData.id)">
+                        <span class="fs-5"> Xóa khỏi giỏ </span>
+                    </button>
+                    <button style="background-color: #274d5a; color: #f7d662" *ngIf="!removeCart"
+                        class="btn w-50 mt-1 btn-add" (click)="addToCart()">
+                        <span class="fs-5"> Thêm vào giỏ </span>
+                    </button>
+                </div>
+                <div class="text-center mt-1" *ngIf="!IsLogin">
+                    <button style="background-color: #274d5a; color: #f7d662" class="btn btn-add w-50"
+                        (click)="goToLogin()">
+                        <span class="fs-5"> Đăng nhập để mua hàng</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

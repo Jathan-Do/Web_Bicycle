@@ -1,0 +1,89 @@
+<div class="checkout">
+  <h2>Xác nhận thanh toán</h2>
+
+  <div class="row mt-5">
+    <div class="col-sm-6" style="border-right: 1px solid black; width: 50%">
+      <h3>Thông tin giao hàng</h3>
+      <p class="message-p">{{ orderMsg }}</p>
+      <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+        <input type="text" class="form-input" name="email" placeholder="Nhập vào email" ngModel required
+          pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" #email="ngModel" />
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-text-danger">
+          <p *ngIf="email.errors?.['required']" class="text-danger">
+            Email không được để trống!
+          </p>
+          <p *ngIf="email.errors?.['pattern']" class="text-danger">
+            Email không hợp lệ!
+          </p>
+        </div>
+
+        <input type="text" class="form-input" required name="address" placeholder="Địa chỉ giao hàng" ngModel
+          #address="ngModel" />
+        <div *ngIf="address.invalid && (address.dirty || address.touched)">
+          <p *ngIf="address.errors?.['required']" class="text-danger">
+            Địa chỉ không được để trống!
+          </p>
+        </div>
+        <input type="text" class="form-input" ngModel name="contact" placeholder="Nhập số điện thoại liên lạc" required
+          pattern="^[0-9]{10}$" #contact="ngModel" />
+        <div *ngIf="contact.invalid && (contact.dirty || contact.touched)">
+          <p *ngIf="contact.errors?.['required']" class="text-danger">
+            SĐT không được để trống!
+          </p>
+          <p *ngIf="contact.errors?.['pattern']" class="text-danger">
+            SĐT không hợp lệ!
+          </p>
+        </div>
+        <select class="form-select mb-2" name="payment" [(ngModel)]="selectedPayment"
+          placeholder="Chọn phương thức thanh toán">
+          placeholder="Chọn phương thức thanh toán">
+          <option value="" disabled selected hidden>
+            Chọn phương thức thanh toán
+          </option>
+          <option value="Chuyển khoản">Chuyển khoản</option>
+          <option value="Tiền mặt">Thanh toán tiền mặt</option>
+          <option value="Paypal">PayPal</option>
+        </select>
+
+        <button type="submit" class="btn btn-outline-success mt-2" [disabled]="orderData.invalid">Đặt hàng ngay</button>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <h3>Thông tin đơn hàng</h3>
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Đơn giá</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cartData; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td scope="row">
+                  <a style="color: #274d5a" [routerLink]="'/details/' + item.productId">{{ item.name }}</a>
+                </td>
+                <td scope="row">
+                  <a [routerLink]="'/details/' + item.productId"><img class="m-1 image" width="200px"
+                      src="{{ item.image }}" alt="{{ item.name }}" /></a>
+                </td>
+                <td scope="row">{{ item.quantity }}</td>
+                <td scope="row">
+                  {{ item.price * item.quantity | number : "1.0-0" }}₫
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-12 text-end">
+          <h5 class="text-danger">Tổng cộng: {{ totalPrice | number : "1.0-0" }}₫</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+
+ .product-header-image{
+    object-fit: contain;
+    width: 100%;
+    height: 600px;
+}
+.product-item{
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+}
+
+.product-item img{
+    width: 90%;
+    margin-left: 5%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.product-item .product-details {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+
+.product-item .name-head{
+    font-size: 20px;
+    font-weight: 600;
+}
+.product-item h6{
+    text-align: center;
+}
+.product-item .product-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.product-color{
+    border: 3px solid #274d5a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+h5:hover{
+    color:#5874bb;
+}
+.category-item h5{
+    border-bottom: 1px solid;
+    
+}
+/* .category-item{
+    background:orangered;
+} */
+.paging{
+    display: flex;
+    justify-content: center;
+}
+.product-box {
+    border-radius: 20px;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 25%);
+    transition: all 0.2s linear;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .product-box:hover {
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .menu {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #274d5a;
+    color: #f7c17b;
+  }
+
+  .btn-add {
+    transition: all 0.2s linear;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-add::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 120%;
+    height: 100%;
+    background-color: #f7d662;
+    transform-origin: 0 left right 0;
+    transform: scaleX(0);
+    transition: 0.25s linear;
+  }
+
+  .btn-add:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn-add:hover span {
+    color: #274d5a;
+    position: relative;
+    z-index: 10;
+  }
+
+  .btn-add:active {
+    animation: zoom-in-zoom-out 2.5s alternate ease;
+  }

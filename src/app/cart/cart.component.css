@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+.summary button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+.summary * {
+    border-radius: 10px;
+}
+.vien{
+    border-radius: 10px;
+}
+.cart-page{
+    display: flex;
+    margin-bottom: 25px;
+}
+.my_li{
+    align-items: center;
+    justify-self: center;
+    display: flex;
+}
+.form-button-hover:hover{
+    color:red;
+    cursor: pointer;
+}
+
+
+
+.cart{
+    margin: top 40px;
+    margin-bottom: 50px;
+}
+.cart h1{
+    text-align: center;
+}
+.details{
+    border: 1px solid #ddd; 
+}
+.details img{
+    height: 100px;
+}
+.details ul{
+    padding: 0;
+    margin:0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.summary h3{
+    text-align: center;
+}
+.summary ul{
+    border: 1px solid #ddd;
+    list-style-type: none;
+    padding: 15px;
+}
+.summary ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-add-less {
+    width: 15%;
+    color: #f7d662;
+    font-size: 24px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    background-color: #274d5a;
+}
+.btn-add-less:hover {
+    background-color: #f7d662;
+    color: #274d5a;
+}
+.btn-add-less:first-child {
+    border-radius: 10px 0px 0px 10px;
+}
+.btn-add-less:last-child {
+    border-radius: 0px 10px 10px 0px;
+}

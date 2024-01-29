@@ -1,0 +1,351 @@
+"category": [
+    {
+      "id": 1,
+      "name": "Xe đạp leo núi",
+      "products": [
+        {
+          "name": "Rabeneick TS10 Pinion",
+          "price": "1229000",
+          "category": "Xe đạp leo núi",
+          "color": "Black",
+          "description": "Rabeneick Rabeneick TS10 Pinion 2020 - Khác có kích thước khung là 60. Xe phù hợp với chiều cao từ 183-192 cm.",
+          "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/628/64c0dc9292a1c_waer1txq43.webp",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Xe đạp đua",
+      "products": []
+    },
+    {
+      "id": 3,
+      "name": "Xe đạp đường phố",
+      "products": []
+    },
+    {
+      "id": 4,
+      "name": "Xe đạp biểu diễn",
+      "products": []
+    },
+    {
+      "id": 5,
+      "name": "Xe đạp không phanh",
+      "products": []
+    },
+    {
+      "id": 6,
+      "name": "Xe đạp gấp",
+      "products": []
+    },
+    {
+      "id": 7,
+      "name": "Xe đạp giá rẻ",
+      "products": []
+    },
+    {
+      "id": 8,
+      "name": "Xe đạp trẻ em",
+      "products": []
+    }
+  ],
+  "product": [
+    {
+      "name": "Rabeneick TS10 Pinion",
+      "price": "1229000",
+      "category": "Xe đạp leo núi",
+      "color": "Black",
+      "description": "Rabeneick Rabeneick TS10 Pinion 2020 - Khác có kích thước khung là 60. Xe phù hợp với chiều cao từ 183-192 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/628/64c0dc9292a1c_waer1txq43.webp",
+      "id": 2
+    },
+    {
+      "name": "NS ns bikes RAG 2",
+      "price": "1859000",
+      "category": "Xe đạp đua",
+      "color": "Yellow",
+      "description": "Xe đạp NS ns 2022 RAG 2 - SRAM Apex có kích thước khung M. Xe phù hợp với chiều cao từ 163-178 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/64c0dc0f8bb4b_vvyurgds4u.webp",
+      "id": 3
+    },
+    {
+      "name": "Whyte Whyte 805",
+      "price": "1189000",
+      "category": "Xe đạp giá rẻ",
+      "color": "Black",
+      "description": "Whyte Whyte 805 2022 - Shimano Deore có khung size M. Xe phù hợp với chiều cao từ 163-178 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/64c0db8ed1b48_pjfk3xm9u6.webp",
+      "id": 4
+    },
+    {
+      "name": "Evil Evil Bikes Force AXS",
+      "price": "1129000",
+      "category": "Xe đạp giá rẻ",
+      "color": "Black",
+      "description": "Evil Evil Bikes 2022 Chamois Hagar Force AXS - SRAM GX có kích thước khung XS. Xe đạp phù hợp với chiều cao 147-168 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/64c0dafb9a4df_stfwxgs6rn.webp",
+      "id": 5
+    },
+    {
+      "name": "Fantic XEF 1.8",
+      "price": "4900000",
+      "category": "Xe đạp leo núi",
+      "color": "Green",
+      "description": "Fantic XEF 1.8 Sport 2022 - SRAM NX Eagle có kích thước khung S. Xe phù hợp với chiều cao cơ thể từ 158-173 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/0fc8dce9-d6dd-4488-87dc-5066ab90fbd4.webp",
+      "id": 6
+    },
+    {
+      "name": "Fantic XTF 1.6 Carbon",
+      "price": "5100000",
+      "category": "Xe đạp leo núi",
+      "color": "Green",
+      "description": "Fantic XTF 1.6 Carbon Sport 2022 - SRAM GX Eagle có kích thước khung M. Xe phù hợp với chiều cao cơ thể từ 163-178 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/779c690f-7c44-4c91-a485-5670199e3e35.webp",
+      "id": 7
+    },
+    {
+      "name": "Coluer POISON SL",
+      "price": "2000000",
+      "category": "Xe trẻ em",
+      "color": "White",
+      "description": "Màu 2023 POISON SL - SRAM0 GX Eagle có khung size M. Xe phù hợp với chiều cao từ 163-178 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/628/64c3777062d32_iq5e8xwbor.webp",
+      "id": 10
+    },
+    {
+      "name": "Giant TCR Pro 1 - Giant ",
+      "price": "2960000",
+      "category": "Xe đạp đua",
+      "color": "Black",
+      "description": "Giant TCR Advanced Pro 1 2022 - Giant SLR Carbon - Shimano Ultegra có khung size S. Xe phù hợp với chiều cao từ 158-173 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/64cccc1b18277_kkxvaugwgh.webp",
+      "id": 11
+    },
+    {
+      "name": "Twitter Cyclone Pro",
+      "price": "27245000",
+      "category": "Xe đạp đua",
+      "color": "Yellow",
+      "description": "Xe đạp thể thao Road Twitter Cyclone Pro Disc Main 29 inch Size M có kiểu dáng thể thao, năng động cùng nhiều phiên bản màu đem đến nhiều sự lựa chọn cho người sử dụng ( các phiên bản màu còn hàng tùy vào khu vực và địa điểm, bài viết sử dụng phiên bản màu vàng để minh họa cho sản phẩm). Chiếc xe thể thao có khối lượng 8.5 kg này phù hợp với các bạn trẻ có đam mê di chuyển, khám phá bản thân trên những chặng đường thú vị.",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/251282/twitter-cyclone-pro-disc-main-700c-vang-glr-1.jpg",
+      "id": 12
+    },
+    {
+      "name": "Txed Classic",
+      "price": "8245000",
+      "category": "Xe đạp đua",
+      "color": "White",
+      "description": "Xe đạp thể thao Road Txed Road Classic 29 inch Size L gây thương nhớ với lối thiết kế tinh tế không kém phần mạnh mẽ, năng động. Xe phù hợp với người có chiều cao từ 160 - 190 cm. Mẫu xe có nhiều phiên bản màu sắc và còn hàng tùy theo khu vực, địa điểm. (Bài viết sử dụng phiên bản màu trắng để minh họa).",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/250983/txed-road-classic-size-l-trang-xanh-l-min-1.jpeg",
+      "id": 13
+    },
+    {
+      "name": "Twitter Sniper 2.0",
+      "price": "18195000",
+      "category": "Xe đạp đua",
+      "color": "Black",
+      "description": "Mang diện mạo trẻ trung cùng phong cách thể thao mạnh mẽ, xe đạp thể thao Road Twitter Sniper 2.0 Disc 29 inch Size L nặng 9 kg là mẫu xe lý tưởng để bạn rèn luyện sức khỏe hay tham gia chinh phục những chặng đua đầy thử thách (các phiên bản màu còn hàng tùy theo khu vực và thời điểm, bài viết sử dụng phiên bản màu đen để minh họa). ",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/251321/xe-dap-twitter-sniper-2-0-disc-brake-main-29-inch-do-den-1.jpg",
+      "id": 14
+    },
+    {
+      "name": "Forever FM041",
+      "price": "5145000",
+      "category": "Xe đạp leo núi",
+      "color": "Black",
+      "description": "Xe đạp địa hình Forever FM041 27,5 inch sở hữu vẻ ngoài ấn tượng với thiết kế thể thao cùng nhiều phiên bản màu sắc trẻ trung (còn hàng tùy khu vực và thời điểm, bài viết sử dụng phiên bản màu đen để minh họa). Dòng xe đạp này phù hợp với những bạn trẻ thích khám phá và thường xuyên có những chuyến đi xa như leo núi, đi phượt.",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/249772/mtb-forever-fm041-den-glr-1.jpg",
+      "id": 15
+    },
+    {
+      "name": "Merida Warrior 300Ds",
+      "price": "6495000",
+      "category": "Xe đạp leo núi",
+      "color": "Black",
+      "description": "Xe đạp địa hình MTB Merida Warrior 300Ds 26 inch Size XS có ngoại hình năng động cùng với các phiên bản màu mạnh mẽ, phù hợp với các bạn trẻ đam mê thử thách, thường xuyên đi phượt, leo núi và có thói quen rèn luyện sức khỏe. (Các phiên bản màu sắc còn hàng tùy theo từng khu vực, bài viết sử dụng phiên bản màu đen để minh họa).",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/250992/xe-dap-merida-warrior-300ds-den-size-xs-1.jpg",
+      "id": 16
+    },
+    {
+      "name": "Java 650B-Delta-12S",
+      "price": "12645000",
+      "category": "Xe đạp leo núi",
+      "color": "Red",
+      "description": "Xe đạp địa hình MTB Java 650B-DELTA-12S Size XL được thiết kế với phong cách thể thao độc đáo đầy ấn tượng. Xe đạp này thích hợp cho những hoạt động thể thao khám phá và chinh phục địa hình đồi núi. (Bài viết được minh họa bởi phiên bản màu đỏ, số lượng hàng còn ở từng khu vực là khác nhau).",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/250291/java-650b-delta-12s-vang-xl-201021-043124.jpg",
+      "id": 17
+    },
+    {
+      "name": "Merida Explorer X",
+      "price": "16145000",
+      "category": "Xe đạp đường phố",
+      "color": "Black",
+      "description": "Xe đạp đường phố Touring Merida Explorer X 29 inch gây ấn tượng với ngoại hình năng động cùng nhiều phiên bản màu tinh tế và kiểu dáng thể thao trẻ trung (các phiên bản màu còn hàng tùy vào khu vực và địa điểm). Dòng xe này không chỉ là đáp ứng tốt nhu cầu di chuyển hàng ngày mà còn là “chiến mã” hoàn hảo để bạn sử dụng trong chuyến đi phượt dài ngày cùng hội nhóm.",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/251068/merida-explorer-x-xam-den-size-s-gallery-1-org.jpg",
+      "id": 18
+    },
+    {
+      "name": "Mocos HK17C08",
+      "price": "7314000",
+      "category": "Xe đạp đường phố",
+      "color": "Gray",
+      "description": "Gây ấn tượng với vẻ ngoài tinh tế, kết cấu khỏe khoắn, xe đạp đường phố Touring Mocos HK17C08 29 inch với nhiều phiên bản màu sắc độc đáo (tình trạng còn hàng tùy theo khu vực và thời điểm, bài viết sử dụng sản phẩm màu xám để minh hoạ). Xe phù hợp với người dùng yêu thích bộ môn xe đạp đường phố, đạp xe thư giãn những ngày cuối tuần. ",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/271406/xe-dap-touring-mocos-hk17c08-29-inch-xam-1.jpg",
+      "id": 19
+    },
+    {
+      "name": "Giant Fastroad SL 2 (2022)",
+      "price": "19201000",
+      "category": "Xe đạp đường phố",
+      "color": "White",
+      "description": "Sở hữu vẻ ngoài ấn tượng với thiết kế tinh tế, thanh lịch, xe đạp đường phố Touring Giant FASTROAD SL 2 (2022) 29 inch Size S sẽ là sự lựa chọn đáng giá cùng bạn vi vu dạo phố với nhiều phiên bản màu sắc thời thượng (tình trạng còn hàng tùy theo khu vực và thời điểm). Chiều cao người dùng khuyến nghị cho mẫu xe là 163 - 173 cm.",
+      "image": "https://cdn.tgdd.vn/Products/Images/9758/269441/giant-fastroad-sl-2-2022-29-inch-size-s-xam-glr-1.jpg",
+      "id": 20
+    },
+    {
+      "name": "CULT BMX GATEWAY 20\" BICYCLE CAVALRY BLUE",
+      "price": "9894000",
+      "category": "Xe đạp biểu diễn",
+      "color": "Blue",
+      "description": "Xe đạp Cult Gateway có khung hình tam giác phía trước mạ crôm, phuộc thép cường độ cao với ống định hướng mạ crôm, thân tải trên, thanh mạ crôm với độ nâng 9 inch, tay nắm Cult Begin, phanh chữ U hợp kim và cần gạt, tay quay mạ crôm 3 chiếc được xử lý nhiệt. với Mid BB được hàn kín, nhông xích kiểu Cult Member 25T, moay-ơ hộp kín 14 mm với trình điều khiển 9T, moay-ơ trước 3/8\" được bịt kín, vành đơn 36H, lốp Vans 2,40\", xích Cult 410, bộ ghế Cult 1pc và bàn đạp Cult PC .",
+      "image": "https://i.ebayimg.com/images/g/pp4AAOSwnDdhj6WF/s-l1600.jpg",
+      "id": 21
+    },
+    {
+      "name": "Nice Kent",
+      "price": "2391000",
+      "category": "Xe đạp biểu diễn",
+      "color": "Red",
+      "description": "Xe đạp dành cho nam 20\" của Kent chaiss là một giá trị tuyệt vời trong một chiếc xe đạp tự do. Đồ họa hấp dẫn trên khung đèn neon mang đến cho chiếc xe một vẻ ngoài nam tính đầy phong cách. Khung và phuộc của xe được làm từ thép có rãnh để có độ bền chắc chắn. Xe đạp hỗn hợp có tay lái tự do giúp kiểm soát và xử lý tốt hơn. Là một chiếc xe đạp BMX, nó có lốp tự do để nâng cao hiệu suất của nó. Hệ thống phanh trong xe đạp tự do bao gồm phanh caliper phía trước và phanh chữ v phía sau mang lại sự an toàn trong những pha nguy hiểm do adrenalin điều khiển. Yên xe và tay lái có thể điều chỉnh để phù hợp với nhiều tay đua khác nhau.",
+      "image": "https://i.ebayimg.com/images/g/b4UAAOSwC8JkylQg/s-l1600.jpg",
+      "id": 22
+    },
+    {
+      "name": "2022 CULT BMX BIKE DEVOTION",
+      "price": "17040000",
+      "category": "Xe đạp biểu diễn",
+      "color": "White",
+      "description": "Xe đạp Cult Devotion 20\" có khung hoàn toàn bằng crôm với Top Tube 21\", phuộc mạ crôm 1-1/8\", thanh 2pc 9\" bằng crôm Cult Salvation v5, tay nắm Cult Begin, tay quay 3 chiếc bằng crôm 175mm với một Mid BB kín, nhông xích kiểu Cult Member 25T, xích Cult 510, moay-ơ hộp kín 14mm với trình điều khiển 9T, moay-ơ trước 3/8\", vành hai thành, lốp Cult VANS 2.40\", bộ phanh chữ U và cần phanh, giá treo phanh có thể tháo rời, ghế xoay Cult và bàn đạp Cult DAK PC.   ",
+      "image": "https://i.ebayimg.com/images/g/Gq4AAOSwDXdhj6bH/s-l1600.jpg",
+      "id": 23
+    },
+    {
+      "name": "Magicbros CX7",
+      "price": "6000000",
+      "category": "Xe đạp không phanh",
+      "color": "Gray",
+      "description": "Nếu như bạn đang muốn kiếm cho mình một chiếc xe đạp fixed gear đúng chuẩn Fixed khung nhôm ngon, bền , rẻ thì Magicbros CX7 là sự lựa chọn không thể bỏ qua. Với thiết kế bản dẹt chém gió giúp bạn cải thiện được lực cản gió, giúp tốc độ cải thiện hơn. Khung sườn được sản xuất từ nhôm 6061 siêu bền, hub xe được hãng trang bị của Legend siêu nhẹ, siêu trớn, trục giữa nhập khẩu, chén cổ bạc đạn là sự khác biệt của magicbros với các loại fixed gear giá rẻ, nhái trên thị trường.",
+      "image": "https://product.hstatic.net/200000051564/product/543534534_4_fc7b5595188c4584accf07d0b36483db_master.jpg",
+      "id": 24
+    },
+    {
+      "name": "Magicbros CX5",
+      "price": "4300000",
+      "category": "Xe đạp không phanh",
+      "color": "Red",
+      "description": "Nếu như bạn đang muốn kiếm cho mình một chiếc xe đạp fixed gear đúng chuẩn Fixed khung nhôm ngon, bền , rẻ thì Magicbros CX5 là sự lựa chọn không thể bỏ qua. Với thiết kế bản dẹt chém gió giúp bạn cải thiện được lực cản gió, giúp tốc độ cải thiện hơn. Khung sườn được sản xuất từ nhôm 6061 siêu bền, hub xe được hãng trang bị của Legend siêu nhẹ, siêu trớn, trục giữa nhập khẩu, chén cổ bạc đạn là sự khác biệt của magicbros với các loại fixed gear giá rẻ, nhái trên thị trường.",
+      "image": "https://product.hstatic.net/200000051564/product/4234234_2_6e8c0bd49da9477dab9489d8a5bbc939_master.jpg",
+      "id": 25
+    },
+    {
+      "name": "Fornix BF200 2023",
+      "price": "1869000",
+      "category": "Xe đạp không phanh",
+      "color": "Red",
+      "description": "Xe đạp Fixed Gear BF200 là phiên bản nâng cấp 2023 từ mẫu tiền nhiệm vốn đã rất quen thuộc với các bạn trẻ là BF100 ra mắt năm 2018. Đây là mẫu xe đạp Fixed Gear cao cấp tới từ thương hiệu xe đạp uy tín Fornix International, với mẫu BF200 nhà sản xuất đã đưa ra một loạt cải tiến đáng ra từng xu mà người dùng phải bỏ ra, như trọng lượng khung thép hợp kim (tối ưu 15% trọng lượng xe), bộ xích KB250 với sức kéo tới 2500N và tuổi thọ lên tới trên 5 năm sử dụng, xe cũng được trang bị phanh trước để tăng tính năng an toàn cho người dùng.",
+      "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/412/747/products/fornix-fixed-gear-bf200.jpg?v=1683768758863",
+      "id": 26
+    },
+    {
+      "name": "GH Bike",
+      "price": "890000",
+      "category": "Xe trẻ em",
+      "color": "Green",
+      "description": "NMT BIKE là thương hiệu xe đạp có xuất xứ từ Đài Loan. Sau nhiều năm hình thành và phát triển, NMT BIKE đã không ngừng nâng cao chất lượng sản phẩm mà mình kinh doanh. Vì vậy, nhiều hộ gia đình Việt Nam đã tin tưởng sử dụng các sản phẩm NMT BIKE không chỉ có chất lượng tốt mà còn có giá thành cạnh tranh.",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2022/04/6-600x400-1.jpg",
+      "id": 27
+    },
+    {
+      "name": "Xaming Baga",
+      "price": "1350000",
+      "category": "Xe trẻ em",
+      "color": "Blue",
+      "description": "Xe Đạp Trẻ Em Nam Xaming Baga 12 Inch đã dần trở nên quen thuộc và trở thành sự lựa chọn hàng đầu của bố mẹ với những mẫu xe đạp cho bé giá rẻ mà chất lượng cực tốt. Xe có xuất xứ từ hãng Xaming nổi tiếng tại Đài Loan. Các sản phẩm của hãng được thiết kế trau chuốt, tỉ mỉ từ các kỹ sư Đài Loan thu hút ánh nhìn của bé ngay từ lần đầu tiên. Với gam màu xanh xinh xắn sẽ là một món quà vô cùng ý nghĩa mà bậc phụ huynh mang lại cho bé",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2022/11/hinh-xe-dap-tre-em-nam-xaming-baga-12-inch-768x510.jpg",
+      "id": 28
+    },
+    {
+      "name": "Jsxiong 2301",
+      "price": "1550000",
+      "category": "Xe trẻ em",
+      "color": "Red",
+      "description": "Thương hiệu xe đạp Jsxiong nổi tiếng đến từ Đài Loan, chuyên sản xuất các dòng xe đạp trẻ em có thiết kế riêng dành riêng cho bé trai và bé gái. Đối với dòng Jsxiong 2301 16 Inch được hãng thiết kế dành cho các bé trai có độ tuổi từ 5-7 tuổi với chất lượng đạt tiêu chuẩn Châu Âu nhưng mức giá tương đối hợp lý nên được nhiều phụ huynh tin tưởng lựa chọn cho bé nhà mình. Jsxiong luôn không ngừng sáng tạo và nâng cấp sản phẩm của mình để mang lại lợi ích tốt nhất cho khách hàng.",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2023/06/xe-dap-cho-be-trai-jsxiong-2301-16-inch-768x510.jpg",
+      "id": 29
+    },
+    {
+      "name": "Fascino FD20",
+      "price": "3190000",
+      "category": "Xe đạp gấp",
+      "color": "Black",
+      "description": "FASCINO là thương hiệu xuất xứ từ Đài Loan nhưng mang chất lượng đạt chuẩn Châu Âu và sản xuất dây chuyền theo công nghệ của Nhật. Nên thương hiệu vẫn giữ vững vị trí trên thị trường xe đạp bởi sự tỉ mỉ, độc đáo và sáng tạo mang sản phẩm tốt nhất đến với khách hàng. Thương hiệu nổi tiếng với các dòng xe như xe đạp thể thao, xe đạp gấp,… phù hợp với nhiều đối tượng và mục đích sử dụng khác nhau. Đối với dòng xe đạp gấp, Xe Đạp Gấp Fascino FD20 Khung Thép 20 Inch mang phong cách và thiết kế chuẩn quốc tế và hợp xu hướng giới trẻ bởi thiết kế đẹp mắt, nhỏ gọn nhưng và mang đi du lịch tiện lợi.",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2023/06/xe-dap-gap-fascino-fd20-khung-thep-20-inch-1-768x510.jpg",
+      "id": 30
+    },
+    {
+      "name": "Brave Will 20-D",
+      "price": "3290000",
+      "category": "Xe đạp gấp",
+      "color": "White",
+      "description": "Brave Will thương hiệu mới nổi trong thời gian gần đây, hãng sở hữu đa dạng các dòng sản phẩm: Xe đạp thể thao, xe đạp gấp, xe đạp phổ thông; phù hợp với mọi đối tượng từ trẻ em đến người lớn. Brave Will luôn chú trọng vào khâu sản xuất, tất cả sản phẩm của hãng được tạo ra bởi máy móc hiện đại, nguyên vật liệu chọn lọc kỹ càng. Sản phẩm được giám sát chặt chẽ từ khâu sản xuất, cho đến khâu thử nghiệm trong điều kiện thời tiết khắc nghiệt, kiểm tra giới hạn độ chịu lực, đảm bảo cho ra những mẫu xe chất lượng chuẩn Hoa Kỳ.",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2023/04/chinh-dien-xe-dap-gap-brave-will-20-d-20-inch-2-768x510.jpg",
+      "id": 31
+    },
+    {
+      "name": "Califa Diamond",
+      "price": "4390000",
+      "category": "Xe đạp gấp",
+      "color": "Black",
+      "description": "Califa  là hãng xe đạp nổi tiếng của Đài Loan. Đến nay, hãng xe đã sở hữu cho mình nhiều nhà máy sản xuất lớn đặt tại nhiều quốc gia toàn thế giới. Các mẫu xe của hãng đa dạng với nhiều loại: xe đạp trẻ em, xe đạp gấp,.. Khung xe được cấu tạo hoàn toàn bằng nhôm để đạt được khối lượng nhẹ chỉ 13,6kg và có thể chịu được tải trọng lơn gần 70kg. Hãng xe ưu ái mang đến cho người dùng với 6 phối màu đa dạng Vàng, Đỏ, Đen, Xám, Xanh dương, Trắng dành cho tất cả mọi người, mọi tính cách, sở thích. Trên thân và cổ xe có khóa gập dùng để thu gọn các bộ phận theo tính năng gấp gọn của xe.",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2022/08/Xe-Dap-Gap-Califa-Diamond-20-Inch-Khung-Nhom-xam-768x512.png",
+      "id": 32
+    },
+    {
+      "name": "Men's Mini Bike ES97",
+      "price": "970000",
+      "category": "Xe đạp trẻ em",
+      "color": "Black",
+      "description": "Xe đạp Mini nam trẻ em mẫu mới đủ Size 12-14-16-18-20 inch cho bé gái 2-11 tuổi",
+      "image": "https://shopcon.vn/wp-content/uploads/2019/07/xe-dap-tre-em-sport-xqx05-8.jpg",
+      "id": 12
+    },
+    {
+      "name": "Women's Mini Bike W87",
+      "price": "870000",
+      "category": "Xe đạp trẻ em",
+      "color": "Black",
+      "description": "Xe đạp Mini nữ trẻ em mẫu mới đủ Size 12-14-16-18-20 inch cho bé gái 2-11 tuổi",
+      "image": "https://xedapgiakho.com/wp-content/uploads/2019/05/Xe-Dap-Tre-Em-12-Inch-Conquer-Speed-Vanh-Nhom-Tim-1-768x510.jpg",
+      "id": 13
+    },
+    {
+      "name": "xe đạp mới",
+      "price": 1999999,
+      "category": "Xe đạp đua",
+      "color": "Black",
+      "description": "Xe đạp xịn nè",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/1272/64c0db8ed1b48_pjfk3xm9u6.webp",
+      "id": 33
+    },
+    {
+      "name": "Rabeneick TS10 Pinion",
+      "price": 1229000,
+      "category": "Xe đạp đua",
+      "color": "Gray",
+      "description": "Rabeneick Rabeneick TS10 Pinion 2020 - Khác có kích thước khung là 60. Xe phù hợp với chiều cao từ 183-193 cm.",
+      "image": "https://d1mgeijqpfaspl.cloudfront.net/uploads/bike/image_side/thumbs/628/64c0dc9292a1c_waer1txq43.webp",
+      "id": 34
+    }
+  ],

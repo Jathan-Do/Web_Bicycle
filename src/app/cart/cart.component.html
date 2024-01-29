@@ -1,0 +1,112 @@
+<div class="container rounded bg-light p-1 mb-2">
+  <div class="row m-1">
+    <div class="col-8">
+      <h3 class="text-center">Giỏ hàng của bạn</h3>
+      <div class="cart-items">
+        <div class="card mb-2" *ngFor="let cart of cartData">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <a [routerLink]="'/details/' + cart.productId"
+                ><img
+                  class="m-1 img-fluid"
+                  src="{{ cart.image }}"
+                  alt="{{ cart.name }}"
+              /></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">{{ cart.name }}</h5>
+                <p class="card-text">
+                  Giá: {{ cart.price | number : "1.0-0" }} VNĐ
+                </p>
+                <div class="card-text">
+                  <div
+                    class="d-flex w-75 justify-content-center align-items-center text-center"
+                  >
+                    <div class="btn-add-less" (click)="decreaseQuantity(cart)">
+                      -
+                    </div>
+                    <input
+                      style="
+                        width: 100% !important;
+                        background: rgba(217, 217, 217, 0.3);
+                        border-radius: 0;
+                        border: none;
+                      "
+                      disabled
+                      class="form-control text-center"
+                      type="number"
+                      [(ngModel)]="cart.quantity"
+                    />
+
+                    <div class="btn-add-less" (click)="increaseQuantity(cart)">
+                      +
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-1">
+              <i
+                class="bx bx-trash form-button-hover"
+                style="
+                  font-size: 30px;
+                  position: absolute;
+                  top: 70%;
+                  right: 20%;
+                  border: none;
+                "
+                (click)="removeToCart(cart.id)"
+              >
+              </i>
+            </div>
+          </div>
+        </div>
+        <div class="row w-100 text-center mb-2">
+          <span
+            class="form-button-hover"
+            style="font-size: medium; cursor: pointer"
+            (click)="clearCart()"
+          >
+            <i class="bx bx-x-circle mt-2" style="font-size: 16px"></i>
+            Xóa giỏ hàng
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <h3 class="text-center">Tiền thanh toán</h3>
+      <div class="payment-summary mb-2">
+        <ul class="list-group">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            Thành tiền
+            <span>{{ priceSummary.price | number : "1.0-0" }} VNĐ</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            Thuế
+            <span>{{ priceSummary.tax | number : "1.0-0" }} VNĐ</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            Phí giao hàng
+            <span>{{ priceSummary.delivery | number : "1.0-0" }} VNĐ</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <h4>Tổng tiền</h4>
+            <h4>{{ priceSummary.total | number : "1.0-0" }} VNĐ</h4>
+          </li>
+        </ul>
+        <button class="btn btn-outline-success mt-3 w-100" (click)="checkout()">
+          Thanh toán
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

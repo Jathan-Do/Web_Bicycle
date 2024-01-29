@@ -1,0 +1,20 @@
+<h3 style='margin-left: 20px;margin-top: 50px;'>Kết quả: </h3>
+<div class="row search-item" *ngFor="let item of searchResult" style='border-bottom: 1px solid black;'>
+  <div class="col-sm-3">
+    <a routerLink="/details/{{item.id}}">
+      <img src="{{item.image}}" alt="">
+    </a>
+  </div>
+  <div class="col-sm-9">
+    <div class="d-flex align-items-center h-100">
+
+      <div class="details">
+        <h6>
+          <a routerLink="/details/{{item.id}}" style="margin-left: 20px;">{{item.name}}</a>
+        </h6>
+        <p><b>Price: {{item.price}}</b></p>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

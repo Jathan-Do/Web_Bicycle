@@ -1,0 +1,76 @@
+<div class="product-list m-5">
+  <h1 class="text-center mb-5">Danh sách khách hàng</h1>
+  <div class="row mb-3">
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Số khách hàng trên mỗi trang:</h6>
+      <select [(ngModel)]="itemsPerPage" class="form-control w-25" (change)="onChangeItemsPerPage($event)">
+        <option *ngFor="let option of selectedItemsPerPage" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Tìm kiếm:</h6>
+      <input [(ngModel)]="searchText" style="
+          background: #ffffff;
+          border-width: 2px 2px 2px 2px;
+          border-style: solid;
+          border-color: #274d5a;
+          border-radius: 10px;
+          padding: 8px;
+          padding-left: 12px;
+        " class="w-50" />
+    </div>
+  </div>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr style="cursor: pointer">
+        <th scope="col" (click)="sort('id')">#</th>
+        <th scope="col" (click)="sort('name')">Họ tên</th>
+        <th scope="col" (click)="sort('phone')">Số điện thoại</th>
+        <th scope="col" (click)="sort('email')">Email</th>
+        <th scope="col" (click)="sort('password')">Mật khẩu</th>
+        <th scope="col" (click)="sort('points')">Điểm tích lũy</th>
+        <th scope="col" (click)="sort('points')">Hạng</th>
+        <th scope="col">Tính năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="
+          let item of UserList
+            | search : searchText
+            | paginate
+              : {
+                  id: 'seller-customer-list-pagination',
+                  itemsPerPage: itemsPerPage,
+                  currentPage: page,
+                  totalItems: totalRecords
+                }
+        ">
+        <td scope="row">{{ item.id }}</td>
+        <td scope="row">{{ item.name }}</td>
+        <td scope="row">{{ item.phone }}</td>
+        <td scope="row">{{ item.email }}</td>
+        <td scope="row">{{ item.password }}</td>
+        <td scope="row">{{ item.points }}₫</td>
+        <td scope="row">{{ getRank(item.points) }}</td>
+        <td scope="row"> <button class="btn btn-outline-success mr-2">
+            Sửa
+          </button>
+          <button class="btn btn-outline-danger">
+            Xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <h6>
+      Showing {{ getStartIndex() }} to {{ getEndIndex() }} of
+      {{ totalRecords }} entries
+    </h6>
+  </div>
+</div>
+<div class="paging d-flex justify-content-center">
+  <pagination-controls id="seller-customer-list-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>

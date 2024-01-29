@@ -1,0 +1,58 @@
+<div class="container mt-4">
+    <h1 class="text-center">Cập nhật sản phẩm</h1>
+    <p class="message-p">{{productMessage}}</p>
+    <form #updateProduct="ngForm" (ngSubmit)="submit(updateProduct.value)" class="row g-3">
+        <div class="col-md-6">
+            <label for="name" class="form-label">Tên sản phẩm:</label>
+            <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" ngModel name="name" id="name"
+                [ngModel]="productData?.name" />
+        </div>
+        <div class="col-md-6">
+            <label for="price" class="form-label">Giá tiền sản phẩm:</label>
+            <input type="number" class="form-control" min="100000" placeholder="Nhập giá tiền sản phẩm" ngModel
+                name="price" id="price" [ngModel]="productData?.price" />
+        </div>
+        <div class="col-md-6">
+            <label for="cateId" class="form-label">Danh mục sản phẩm:</label>
+            <select class="form-select" id="myDropdown" name="cateId" ngModel [ngModel]="productData?.cateId"
+                placeholder="Chọn loại sản phẩm" id="cateId">
+                <option value="" disabled selected hidden>Chọn danh mục</option>
+                <option *ngFor="let category of categories" [value]="+category.id">{{ category.name }}</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="color" class="form-label">Màu sản phẩm:</label>
+            <select class="form-select" id="myDropdown" onchange="updateDropdownName(this)" ngModel name="color"
+                placeholder="Chọn màu sản phẩm" id="color" [ngModel]="productData?.color">
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Gray">Gray</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="White">White</option>
+                <option value="Gold">Gold</option>
+                <option value="Red">Red</option>
+                <option value="Pink">Pink</option>
+                <option value="Purple">Purple</option>
+                <option value="Orange">Orange</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label for="description" class="form-label">Mô tả sản phẩm:</label>
+            <input type="text" class="form-control" placeholder="Nhập vào mô tả sản phẩm" ngModel name="description"
+                id="description" [ngModel]="productData?.description" />
+        </div>
+        <div class="col-12">
+            <label for="image" class="form-label">Hình ảnh:</label>
+            <input type="text" class="form-control" placeholder="Nhập vào URL hình ảnh" [ngModel]="productData?.image"
+                name="image" id="image" (input)="updateImage($event)" />
+        </div>
+        <div class="text-center">
+            <img [src]="productData?.image" style="max-height: 250px" alt="Hình ảnh sản phẩm"
+                *ngIf="productData?.image" />
+        </div>
+        <div class="col-12 text-center mb-3">
+            <button class="btn btn-outline-success">Sửa sản phẩm</button>
+        </div>
+    </form>
+</div>

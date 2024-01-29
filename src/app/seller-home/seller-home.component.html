@@ -1,0 +1,112 @@
+<div class="product-list m-5">
+  <h1 class="text-center mb-5">Danh sách sản phẩm</h1>
+  <div class="row">
+    <div class="mb-0 col-6">
+      <h6 class="mb-0">Số sản phẩm trên mỗi trang:</h6>
+      <select [(ngModel)]="itemsPerPage" class="form-control w-25">
+        <option
+          *ngFor="let option of selectedItemsPerPage"
+          [value]="option"
+          (change)="onChangeItemsPerPage($event)"
+        >
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <div class="mb-0 col-5">
+      <h6 class="mb-0">Tìm kiếm:</h6>
+      <input
+        [(ngModel)]="searchText"
+        style="
+          background: #ffffff;
+          border-width: 2px 2px 2px 2px;
+          border-style: solid;
+          border-color: #274d5a;
+          border-radius: 10px;
+          padding: 8px;
+          padding-left: 12px;
+        "
+        class="w-50"
+      />
+    </div>
+    <div class="col-1">
+      <a
+        class="btn btn-outline-primary"
+        routerLink="/seller-add-product"
+        style="position: absolute; right: 5%; top: 45%"
+        >Thêm sản phẩm</a
+      >
+    </div>
+  </div>
+  <p class="text-danger">{{ productMessage }}</p>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr style="cursor: pointer">
+        <th scope="col" (click)="sort('id')">#</th>
+        <th scope="col">Hình ảnh</th>
+        <th scope="col" (click)="sort('name')">Tên sản phẩm</th>
+        <th scope="col" (click)="sort('price')">Giá tiền</th>
+        <th scope="col" (click)="sort('color')">Màu</th>
+        <th scope="col" (click)="sort('category')">Loại</th>
+        <th scope="col" (click)="sort('description')">Mô tả</th>
+        <th scope="col">Chức năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let item of productList
+            | search : searchText
+            | paginate
+              : {
+                  id: 'seller-home-list-pagination',
+                  itemsPerPage: itemsPerPage,
+                  currentPage: page,
+                  totalItems: totalRecords
+                }
+        "
+      >
+        <td scope="row">{{ item.id }}</td>
+        <td scope="row">
+          <img
+            class="img-thumbnail"
+            src="{{ item.image }}"
+            style="max-width: 300px; height: 100px; width: 100px"
+          />
+        </td>
+        <td scope="row">{{ item.name }}</td>
+        <td scope="row">{{ item.price | number : "1.0-0" }}₫</td>
+        <td scope="row">{{ item.color }}</td>
+        <td scope="row">{{ getCategoryById(item.cateId)?.name }}</td>
+        <td scope="row">{{ item.description }}</td>
+        <td scope="row">
+          <div style="text-align: center; display: flex">
+            <button
+              class="btn btn-outline-danger me-2"
+              (click)="deleteProduct(item.id)"
+            >
+              Xóa
+            </button>
+            <a
+              class="adjust-update-link btn btn-outline-success"
+              routerLink="/seller-update-product/{{ item.id }}"
+              >Sửa</a
+            >
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <h6>
+      Showing {{ getStartIndex() }} to {{ getEndIndex() }} of
+      {{ totalRecords }} entries
+    </h6>
+  </div>
+</div>
+<div class="paging d-flex justify-content-center">
+  <pagination-controls
+    id="seller-home-list-pagination"
+    (pageChange)="page = $event"
+  ></pagination-controls>
+</div>

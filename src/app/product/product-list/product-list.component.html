@@ -1,0 +1,102 @@
+<div class="product-list-wrapper d-flex mt-5">
+  <div class="col-2">
+    <div class="pe-2">
+      <a
+        class="text-decoration-none d-flex align-items-center justify-content-center justify-content-lg-around category-link radius-main mb-3"
+        data-bs-toggle="collapse"
+        href="#categoryCollapse"
+        role="button"
+        aria-expanded="false"
+        aria-controls="categoryCollapse"
+      >
+        <span class="fs-4 fw-semibold btn menu">
+          <i class="bx bx-list-ul fs-4" style="color: #f7c17b"></i>
+          Danh mục
+        </span>
+      </a>
+    </div>
+    <div
+      id="categoryCollapse"
+      class="collapse show py-3 radius-main border rounded-2"
+      style="background-color: #274d5a"
+    >
+      <div class="w-100 my-2 gap-lg-0 gap-4 btn btn-add text-start">
+        <a style="cursor: pointer; color: #f7c17b" (click)="filter(0)">
+          <span class="fs-6">Tất cả danh mục</span>
+        </a>
+      </div>
+      <div
+        class="w-100 my-2 gap-lg-0 gap-4 btn btn-add text-start"
+        *ngFor="let category of categoryData"
+      >
+        <a
+          style="cursor: pointer; color: #f7c17b"
+          (click)="filter(category.id)"
+        >
+          <span class="fs-6">{{ category.name }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product-list-wrapper col-10">
+    <div class="row">
+      <div
+        class="col-sm-3"
+        *ngFor="
+          let item of filterCategory
+            | search : searchKey
+            | paginate
+              : {
+                  id: 'listing-pagination',
+                  itemsPerPage: 8,
+                  currentPage: page,
+                  totalItems: totalRecords
+                }
+        "
+      >
+        <div class="rounded-2 product-box" style="height: 450px">
+          <a [routerLink]="'/details/' + item.id"
+            ><img
+              [src]="item.image"
+              alt=""
+              style="
+                width: 100%;
+                height: 250px;
+                object-fit: fill;
+                border-radius: 10px 10px 0 0;
+                border: none;
+              "
+            />
+            <div
+              class="product-details text-center mt-3"
+              style="color: #274d5a"
+            >
+              <h5
+                class="name-head text-center fw-bold"
+                [routerLink]="'/details/' + item.id"
+              >
+                {{ item.name }}
+              </h5>
+              <div class="product-price">
+                <h5>Giá tiền: {{ item.price | number : "1.0-0" }}₫</h5>
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+                <h5 style="text-align: center" class="me-2">Màu:</h5>
+                <h3
+                  [style.backgroundColor]="item.color"
+                  class="product-color"
+                ></h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="paging">
+        <pagination-controls
+          id="listing-pagination"
+          (pageChange)="page = $event"
+        ></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>
